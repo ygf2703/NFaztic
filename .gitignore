@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# local dev logs
+dev-server*.log
+
 # production
 /build
 

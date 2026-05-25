@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NFAZTIC Artist Website
+
+Production-ready Next.js site for NFAZTIC, a Psy / Goa Trance artist. It uses
+Next.js App Router, Tailwind CSS, Framer Motion, official music embeds, the
+YouTube IFrame API, and a custom terminal navigation interface.
+
+## Stack
+
+- Next.js 16 App Router
+- React 19
+- Tailwind CSS 4
+- Framer Motion
+- lucide-react icons
+
+## Media
+
+Local development uses copied assets in `public/media`. For production, point
+heavy MP4/WAV media at a CDN:
+
+```bash
+NEXT_PUBLIC_HERO_VIDEO_URL=https://cdn.example.com/nfaztic/cerberos.mp4
+NEXT_PUBLIC_BANDCAMP_URL=https://nfaztic.bandcamp.com
+NEXT_PUBLIC_HIGH_FIDELITY_WAV_URL=https://cdn.example.com/nfaztic/master.wav
+NEXT_PUBLIC_SITE_URL=https://your-vercel-domain.vercel.app
+```
+
+If `NEXT_PUBLIC_HERO_VIDEO_URL` is empty, the local
+`/media/hero-cerberos.mp4` fallback is used.
+
+## Terminal Contract
+
+The terminal component routes all terminal text output through:
+
+```ts
+function displayToTerminal(text: string) {
+  // append output to the custom terminal UI
+}
+```
+
+Implemented commands: `help`, `play`, `bio`, `visuals`, `video`, `contact`,
+and `clear`.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy on Vercel by importing the GitHub repository, adding the optional media
+environment variables above, and using the default Next.js build command:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## QA
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Useful local checks:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+npm run build
+```
