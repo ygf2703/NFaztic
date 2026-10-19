@@ -178,6 +178,38 @@ export function ArtistSite() {
                 Open terminal
               </button>
             </div>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.26em] text-zinc-400">
+                Listen now
+              </span>
+              <a
+                href={spotifyArtistUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-black/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-[#1ed760]/70 hover:text-[#1ed760]"
+              >
+                <Play className="h-4 w-4" />
+                Spotify
+              </a>
+              <a
+                href={appleMusicArtistUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-black/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-[#fa243c]/70 hover:text-[#fa243c]"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Apple Music
+              </a>
+              <a
+                href={youtubeChannelUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-black/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-[#ff2bd6]/70 hover:text-[#ff2bd6]"
+              >
+                <ExternalLink className="h-4 w-4" />
+                YouTube
+              </a>
+            </div>
           </motion.div>
 
           <button
