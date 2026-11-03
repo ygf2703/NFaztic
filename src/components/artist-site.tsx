@@ -17,15 +17,18 @@ import {
   artistName,
   heroVideoSrc,
   highFidelityLinks,
+  instagramUrl,
   musicEmbeds,
   navItems,
   signals,
   socialLinks,
   spotifyArtistUrl,
+  tiktokUrl,
   visualWorks,
   youtubeChannelUrl,
   youtubeUploadsPlaylistId,
 } from "@/lib/site-data";
+import { InstagramIcon, TikTokIcon } from "./icons";
 import { TerminalInterface } from "./terminal-interface";
 import { YouTubeGallery } from "./youtube-gallery";
 
@@ -208,6 +211,24 @@ export function ArtistSite() {
               >
                 <ExternalLink className="h-4 w-4" />
                 YouTube
+              </a>
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-black/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-[#ff2bd6]/70 hover:text-[#ff2bd6]"
+              >
+                <InstagramIcon className="h-4 w-4" />
+                Instagram
+              </a>
+              <a
+                href={tiktokUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-black/35 px-5 text-sm font-semibold text-white backdrop-blur transition hover:border-[#1bf7d1]/70 hover:text-[#1bf7d1]"
+              >
+                <TikTokIcon className="h-4 w-4" />
+                TikTok
               </a>
             </div>
           </motion.div>
