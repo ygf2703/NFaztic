@@ -398,6 +398,7 @@ export function ArtistSite() {
               >
                 <Image
                   src={work.src}
+                  unoptimized={work.src.startsWith("https://")}
                   alt={`${artistName} artwork: ${work.title}`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
