@@ -6,11 +6,12 @@ import {
   Radio,
   Video,
 } from "lucide-react";
+import { InstagramIcon, TikTokIcon } from "../components/icons";
 
 export const artistName = "NFAZTIC";
 
 export const heroVideoSrc =
-  process.env.NEXT_PUBLIC_HERO_VIDEO_URL || "/media/hero-cerberos.mp4";
+  process.env.NEXT_PUBLIC_HERO_VIDEO_URL || "/media/hero-spiral-string.mp4";
 
 export const spotifyArtistUrl =
   "https://open.spotify.com/artist/6jX8Nthw9i2jsDNpszPxxV?si=59c9e3be3b68478a";
@@ -19,12 +20,16 @@ export const appleMusicArtistUrl =
   "https://music.apple.com/us/artist/nfaztic/1819876025";
 
 export const youtubeChannelUrl =
-  "https://www.youtube.com/channel/UCZlT1pwqSx3QbFSIcu_BRwg";
+  "https://www.youtube.com/@nfaztic";
 
 export const soundCloudUrl =
-  "https://soundcloud.com/nfaztic273?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing";
+  "https://soundcloud.com/nfaztic273";
 
-export const youtubeUploadsPlaylistId = "UUZlT1pwqSx3QbFSIcu_BRwg";
+export const youtubeUploadsPlaylistId = "UUPb-S3gq9uXdWcpGKWo3DPg";
+
+export const instagramUrl = "https://www.instagram.com/nfazticmusic/";
+
+export const tiktokUrl = "https://www.tiktok.com/@nfaztic";
 
 export const navItems = [
   { label: "Music", target: "music" },
@@ -88,6 +93,21 @@ export const highFidelityLinks = [
 ];
 
 export const visualWorks = [
+  {
+    title: "THE MOSSBOUND CALL",
+    src: "/media/the-mossbound-call.jpg",
+    tone: "swamp signal",
+  },
+  {
+    title: "the rise of the sun",
+    src: "/media/the-rise-of-the-sun.jpg",
+    tone: "solar ignition",
+  },
+  {
+    title: "THE BEGINNING OF A JOURNEY",
+    src: "/media/the-beginning-of-a-journey.jpg",
+    tone: "origin pulse",
+  },
   {
     title: "Explosive Energy",
     src: "/media/explosive-energy.png",
@@ -155,4 +175,6 @@ export const socialLinks = [
   { label: "Apple Music", href: appleMusicArtistUrl, icon: Apple },
   { label: "YouTube", href: youtubeChannelUrl, icon: Video },
   { label: "SoundCloud", href: soundCloudUrl, icon: Radio },
+  { label: "Instagram", href: instagramUrl, icon: InstagramIcon },
+  { label: "TikTok", href: tiktokUrl, icon: TikTokIcon },
 ];
