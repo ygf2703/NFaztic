@@ -381,7 +381,7 @@ export function ArtistSite() {
             <ImageIcon className="hidden h-9 w-9 text-[#ff2bd6] sm:block" />
           </div>
 
-          <div className="grid auto-rows-[minmax(280px,32vw)] gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visualWorks.map((work, index) => (
               <motion.article
                 key={work.src}
@@ -391,9 +391,7 @@ export function ArtistSite() {
                 transition={{ duration: 0.45, delay: (index % 4) * 0.05 }}
                 whileHover={reduceMotion ? undefined : { y: -6 }}
                 className={[
-                  "group relative overflow-hidden rounded-lg border border-white/10 bg-black",
-                  index === 0 || index === 10 ? "sm:col-span-2" : "",
-                  index === 5 ? "lg:col-span-2 lg:row-span-2" : "",
+                  "group relative aspect-square overflow-hidden rounded-lg border border-white/10 bg-black",
                 ].join(" ")}
               >
                 <Image
